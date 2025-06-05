@@ -5,6 +5,7 @@ import qs from "qs";
 import { twMerge } from "tailwind-merge";
 
 import { aspectRatioOptions } from "@/constants";
+import { FormUrlQueryParams, RemoveUrlQueryParams } from "@/types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -94,7 +95,7 @@ export const debounce = (func: (...args: any[]) => void, delay: number) => {
 };
 
 // GE IMAGE SIZE
-type AspectRatioKey = keyof typeof aspectRatioOptions;
+export type AspectRatioKey = keyof typeof aspectRatioOptions;
 export const getImageSize = (
   type: string,
   image: any,

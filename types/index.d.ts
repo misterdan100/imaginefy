@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 
+import { IImage } from "@/lib/database/models/image.model";
+
 // ====== USER PARAMS
 declare type CreateUserParams = {
   clerkId: string;
@@ -117,3 +119,12 @@ declare type SearchParamProps = {
   params: { id: string; type: TransformationTypeKey };
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
+declare type TransformationFormProps = {
+  action: 'Add' | 'Update'
+  userId: string
+  type: TransformationTypeKey
+  creditBalance: number
+  data?: IImage | null
+  config?: Transformations | null
+}
