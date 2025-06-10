@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
+import { CreateUserParams, UpdateUserParams } from "@/types";
 
 // CREATE
 export async function createUser(user: CreateUserParams) {
@@ -70,5 +71,24 @@ export async function deleteUser(clerkId: string) {
     return deletedUser ? JSON.parse(JSON.stringify(deletedUser)) : null;
   } catch (error) {
     handleError(error);
+  }
+}
+
+// USE CREDITS
+export async function updateCredits (userId: string, creditFee: number) {
+  try {
+    await connectToDatabase();
+    const updatedUserCredits = await User.findByIdAndUpdate(
+      { _id: userId },
+      { $inc: { credits: creditFee }},
+      { new: true }
+    )
+
+    if(!updatedUserCredits) throw new Error('User credits update failed')
+
+    return JSON.parse(JSON.stringify(updatedUserCredits))
+    
+  } catch (error) {
+    handleError(error)
   }
 }
