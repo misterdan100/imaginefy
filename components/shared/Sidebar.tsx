@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <div className="flex size-full flex-col gap-4">
+      <div className="flex flex-col gap-4 size-full">
         <Link href="/" className="sidebar-logo">
           <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
         </Link>
@@ -44,6 +44,22 @@ const Sidebar = () => {
 
 
             <ul className="sidebar-nav_elements">
+
+              {/* GitHub button */}
+              <li  className={`sidebar-nav_element group text-gray-700`}>
+                <Link className="sidebar-link" href='https://github.com/adrianhajdin/ai_saas_app?tab=readme-ov-file#%EF%B8%8F-snippets' target='_blank'>
+                  <Image 
+                    src='/assets/icons/bag.svg'
+                    alt="logo"
+                    width={24}
+                    height={24}
+                  />
+                  GitHub Source
+                </Link>
+              </li>
+
+
+
               {navLinks.slice(6).map((link) => {
                 const isActive = link.route === pathname
 
@@ -65,14 +81,14 @@ const Sidebar = () => {
                 )
               })}
 
-              <li className="flex-center cursor-pointer gap-2 p-4">
+              <li className="flex-center gap-2 p-4 cursor-pointer">
                 <UserButton afterSignOutUrl='/' showName />
               </li>
             </ul>
           </SignedIn>
 
           <SignedOut>
-            <Button asChild className="button bg-purple-gradient bg-cover">
+            <Button asChild className="bg-purple-gradient bg-cover button">
               <Link href="/sign-in">Login</Link>
             </Button>
           </SignedOut>
