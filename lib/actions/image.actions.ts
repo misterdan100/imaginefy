@@ -13,7 +13,7 @@ import {v2 as cloudinary} from 'cloudinary'
 const populateUser = (query: any) => query.populate({
     path: 'author',
     model: User,
-    select: '_id firstName lastName'
+    select: '_id firstName lastName clerkId'
 })
 
 // ADD IMAGE TO DB
@@ -58,7 +58,7 @@ export async function updateImage({ image, userId, path }: UpdateImageParams) {
 
         revalidatePath(path);
 
-        return JSON.parse(JSON.stringify(updateImage))
+        return JSON.parse(JSON.stringify(updatedImage))
     } catch (error) {
         handleError(error)
     }
