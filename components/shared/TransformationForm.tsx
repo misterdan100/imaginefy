@@ -194,11 +194,11 @@ export const TransformationForm = ({
         },
       }));
 
-      return onChangeField(value);
-    }, 1000);
+    }, 1000)();
+
+    return onChangeField(value);
   };
 
-  // Todo: Return to updateCredits
   const onTransformHandler = async () => {
     setIsTransforming(true);
 
