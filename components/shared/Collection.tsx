@@ -51,7 +51,7 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="text-dark-600 h2-bold">Recent Edits</h2>
+        <h2 className="gradient-title h2-bold">Recent Edits</h2>
         {hasSearch && <Search />}
       </div>
 
@@ -111,7 +111,7 @@ const Card = ({ image }: { image: IImage }) => {
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="flex-between">
-          <p className="mr-3 p-20-semibold text-dark-600 line-clamp-1">
+          <p className="mr-3 p-20-semibold text-gray-900 line-clamp-1">
             {image.title}
           </p>
           <Image
@@ -123,6 +123,7 @@ const Card = ({ image }: { image: IImage }) => {
             alt={image.title}
             width={24}
             height={24}
+            className="gradient-title"
           />
         </div>
       </Link>

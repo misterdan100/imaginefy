@@ -63,7 +63,7 @@ export const MediaUploader = ({
     >
       {({open}) => (
         <div className="flex flex-col gap-4">
-          <h3 className="text-dark-600 h3-bold">Original</h3>
+          <h3 className="w-fit gradient-title h3-bold">Original</h3>
 
           {publicId ? (
             <>

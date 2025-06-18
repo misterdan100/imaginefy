@@ -14,7 +14,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="flex flex-col gap-4 size-full">
         <Link href="/" className="sidebar-logo">
-          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
+          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} className='w-full text-center'/>
         </Link>
 
         <nav className="sidebar-nav">
@@ -25,7 +25,7 @@ const Sidebar = () => {
 
                 return (
                   <li key={link.route} className={`sidebar-nav_element group ${
-                    isActive ? 'bg-purple-gradient text-white' : 'text-gray-700'
+                    isActive ? 'nav-button' : 'text-gray-700'
                   }`}>
                     <Link className="sidebar-link" href={link.route}>
                       <Image 
@@ -33,7 +33,7 @@ const Sidebar = () => {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && 'brightness-200'}`}
+                        className={`${!isActive && 'brightness-100 grayscale'}`}
                       />
                       {link.label}
                     </Link>
@@ -45,19 +45,6 @@ const Sidebar = () => {
 
             <ul className="sidebar-nav_elements">
 
-              {/* GitHub button */}
-              <li  className={`sidebar-nav_element group text-gray-700`}>
-                <Link className="sidebar-link" href='https://github.com/adrianhajdin/ai_saas_app?tab=readme-ov-file#%EF%B8%8F-snippets' target='_blank'>
-                  <Image 
-                    src='/assets/icons/bag.svg'
-                    alt="logo"
-                    width={24}
-                    height={24}
-                  />
-                  GitHub Source
-                </Link>
-              </li>
-
 
 
               {navLinks.slice(6).map((link) => {
@@ -65,7 +52,7 @@ const Sidebar = () => {
 
                 return (
                   <li key={link.route} className={`sidebar-nav_element group ${
-                    isActive ? 'bg-purple-gradient text-white' : 'text-gray-700'
+                    isActive ? 'nav-button' : 'text-gray-700'
                   }`}>
                     <Link className="sidebar-link" href={link.route}>
                       <Image 
@@ -73,7 +60,7 @@ const Sidebar = () => {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && 'brightness-200'}`}
+                        className={`${!isActive && 'brightness-100 grayscale'}`}
                       />
                       {link.label}
                     </Link>

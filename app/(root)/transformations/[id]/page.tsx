@@ -63,7 +63,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
         <div className="transformation-grid">
           {/* MEDIA UPLOADER */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-dark-600 h3-bold">Original</h3>
+            <h3 className="gradient-title h3-bold">Original</h3>
 
             <Image
               width={getImageSize(image.transformationType, image, "width")}
