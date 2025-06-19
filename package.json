@@ -20,6 +20,7 @@
     "class-variance-authority": "^0.7.0",
     "cloudinary": "^2.6.1",
     "clsx": "^2.1.0",
+    "developer-icons": "^5.3.9",
     "lucide-react": "^0.323.0",
     "mongodb": "^6.16.0",
     "mongoose": "^8.15.1",

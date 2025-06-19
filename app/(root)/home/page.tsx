@@ -5,7 +5,7 @@ import { SearchParamProps } from "@/types"
 import Image from "next/image"
 import Link from "next/link"
 
-const Home = async ({ searchParams}: SearchParamProps) => {
+const HomePage = async ({ searchParams}: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1
   const searchQuery = (searchParams?.query as string) || ''
 
@@ -15,7 +15,7 @@ const Home = async ({ searchParams}: SearchParamProps) => {
     <>
       <section className="home">
         <h1 className="home-heading">
-          Unleash Your Creative Vision with Imaginefy
+          Unleash Your Creative Vision with Imaginify
         </h1>
 
         <ul className="flex-center gap-20 w-full">
@@ -25,7 +25,7 @@ const Home = async ({ searchParams}: SearchParamProps) => {
               href={link.route}
               className="flex-col flex-center gap-2"
             >
-              <li className="flex-center bg-white p-4 rounded-full w-fit">
+              <li className="flex-center bg-white p-4 rounded-full w-fit hover:scale-110 transition-transform">
                 <Image 
                   src={link.icon}
                   width={24}
@@ -54,4 +54,4 @@ const Home = async ({ searchParams}: SearchParamProps) => {
   )
 }
 
-export default Home
+export default HomePage

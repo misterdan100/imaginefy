@@ -58,7 +58,7 @@ const MobileNav = () => {
 
                 return (
                   <li 
-                    className={`${isActive && 'gradient-text'} p-18 flex whitespace-nowrap text-dark-700`}
+                    className={`${isActive && 'gradient-text nav-button'} w-full p-18 flex whitespace-nowrap text-dark-700`}
                     key={link.route}
                     >
                     <Link className="cursor-pointer sidebar-link" href={link.route} onClick={() => setOpen(false)}>

@@ -107,11 +107,11 @@ const Card = ({ image }: { image: IImage }) => {
           height={image.height}
           {...image.config}
           loading="lazy"
-          className="rounded-[10px] w-full h-52 object-cover"
+          className="rounded-[10px] w-full h-52 object-cover hover:rotate-2 hover:scale-105 transition-transform"
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="flex-between">
-          <p className="mr-3 p-20-semibold text-gray-900 line-clamp-1">
+          <p className="hover:bg-clip-text hover:bg-gradient-to-br hover:from-orange-500 hover:to-purple-500 mr-3 p-20-semibold text-gray-900 hover:text-transparent line-clamp-1 transition-colors">
             {image.title}
           </p>
           <Image
@@ -123,7 +123,6 @@ const Card = ({ image }: { image: IImage }) => {
             alt={image.title}
             width={24}
             height={24}
-            className="gradient-title"
           />
         </div>
       </Link>

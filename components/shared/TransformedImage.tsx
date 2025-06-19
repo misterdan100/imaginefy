@@ -37,9 +37,10 @@ export const TransformedImage = ({
 
             {hasDownload && (
                 <button 
-                    className="download-btn"
+                    className="group relative bg-gradient-to-br from-orange-100 to-[#e0ddff] px-6 py-1 border hover:border-gray-300 border-transparent rounded-xl transition-colors download-btn"
                     onClick={(e) => downloadHandler(e)}
                 >
+                    Download Image
                     <Image 
                         src='/assets/icons/download.svg'
                         alt="Download"
@@ -47,6 +48,7 @@ export const TransformedImage = ({
                         height={24}
                         className="pb-[6px]"
                     />
+                
                 </button>
             )}
 

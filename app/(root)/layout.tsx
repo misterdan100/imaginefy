@@ -12,6 +12,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="wrapper">
           {children}
         </div>
+        <div 
+          className='flex flex-wrap justify-center mt-8 py-1 w-full'
+        >
+          <p>Developed by 
+            <a href="https://daniel-merchan.vercel.app/" target='_blank'
+              className='bg-clip-text bg-gradient-to-br from-orange-500 hover:from-orange-700 to-purple-500 hover:to-purple-700 font-semibold text-transparent transition-colors'
+            > Daniel Merchan </a>
+          
+          </p>
+
+
+        </div>
       </div>
       <Toaster
         richColors={true}

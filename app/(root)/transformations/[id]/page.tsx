@@ -22,8 +22,8 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
 
       <section className="flex flex-wrap gap-4 mt-5">
         <div className="flex gap-2 p-14-medium md:p-16-medium">
-          <p className="text-dark-600">Transformation:</p>
-          <p className="text-purple-400 capitalize">
+          <p className="text-gray-600">Transformation:</p>
+          <p className="text-gray-500 capitalize">
             {image.transformationType}
           </p>
         </div>
@@ -32,8 +32,8 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
           <>
             <p className="hidden md:block text-dark-400/50">&#x25CF;</p>
             <div className="flex gap-2 p-14-medium md:p-16-medium">
-              <p className="text-dark-600">Prompt:</p>
-              <p className="text-purple-400 capitalize">{image.prompt}</p>
+              <p className="text-gray-600">Prompt:</p>
+              <p className="text-gray-500 capitalize">{image.prompt}</p>
             </div>
           </>
         )}
@@ -42,8 +42,8 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
           <>
             <p className="hidden md:block text-dark-400/50">&#x25CF;</p>
             <div className="flex gap-2 p-14-medium md:p-16-medium">
-              <p className="text-dark-600">Color:</p>
-              <p className="text-purple-400 capitalize">{image.color}</p>
+              <p className="text-gray-600">Color:</p>
+              <p className="text-gray-500 capitalize">{image.color}</p>
             </div>
           </>
         )}
@@ -52,8 +52,8 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
           <>
             <p className="hidden md:block text-dark-400/50">&#x25CF;</p>
             <div className="flex gap-2 p-14-medium md:p-16-medium">
-              <p className="text-dark-600">Aspect Ratio:</p>
-              <p className="text-purple-400 capitalize">{image.aspectRatio}</p>
+              <p className="text-gray-600">Aspect Ratio:</p>
+              <p className="text-gray-500 capitalize">{image.aspectRatio}</p>
             </div>
           </>
         )}
